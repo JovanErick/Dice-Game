@@ -5,7 +5,13 @@
 }
 
 body {
-	background-color: #faf8f1;
+	background: linear-gradient(
+		to right,
+		#bbcea8 0%,
+		#bbcea8 50%,
+		#e3d87e 50%,
+		#e3d87e 100%
+	);
 }
 
 header {
@@ -14,26 +20,26 @@ header {
 }
 
 header h1 {
-	color: #c58940;
-	font-family: 'Klee One', cursive;
+	color: #748067;
+	font-family: 'Poppins', cursive;
 	font-size: clamp(3rem, 10vw, 5rem);
 	font-style: italic;
 	margin: 0 auto;
+	text-transform: uppercase;
 }
 
 main {
 	display: flex;
-    flex-direction: column;
-	justify-content: center;
+	flex-direction: column;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .dice {
-	width: 70vmax;
+	width: 70vw;
 	display: flex;
 	justify-content: space-around;
 }
@@ -47,37 +53,58 @@ main {
 .dice img {
 	margin: 0 auto;
 	aspect-ratio: 1;
-	width: max(15rem, 20vw);
+	width: 17rem;
 }
 
 .dice h2 {
 	margin: 0 auto;
 	font-family: 'Poppins', sans-serif;
-	color: #c58940;
+	color: #0b0a07;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
-main button {
-    margin: 3rem auto;
-    width: 10rem;
-    font-size: 1.2rem;
-    border: 0;
-    border-radius: 5px;
-    background-color: #c58940;
-    color: #faf8f1;
-    padding: 2.5px 0;
-    cursor: pointer;
-    transition: all 0.25s;
+.roll-dice-btn {
+	margin: 2.75rem auto 0 auto;
+	font-size: 1.3rem;
+	border: 0;
+	border-radius: 5px;
+	background-color: #748067;
+	color: #ffffff;
+	padding: 7.5px 2.25rem;
+	cursor: pointer;
+	transition: all 0.25s;
 }
 
-main button:hover {
-    transform: scale(1.05);
+.roll-dice-btn:hover,
+.roll-dice-btn:active {
+	transform: scale(1.05);
+}
+
+.new-game-btn {
+	margin: 0 auto;
+	max-width: fit-content;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	font-size: large;
+	color: #0b0a07;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+
+.new-game-btn:hover {
+	color: #748067;
 }
 
 main p {
-    margin: 0 auto;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
+	margin: 0 auto;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+	text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -88,5 +115,10 @@ main p {
 
 	.dice img {
 		width: 30vw;
+	}
+
+	.roll-dice-btn {
+		font-size: 1rem;
+		padding: 7.5px 2rem;
 	}
 }
